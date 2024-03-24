@@ -25,7 +25,7 @@ ln -s /opt/apache-tomcat/bin/shutdown.sh /usr/local/bin/tomcatdown
 # Download the EC2Box package
 wget https://github.com/bastillion-io/Bastillion-EC2/archive/refs/tags/v0.35.01.tar.gz -P /opt/
 tar -xvf v0.35.01.tar.gz
-rm -rf 
+rm -rf v0.35.01.tar.gz && rm -rf /opt/Bastillion-EC2-0.35.01/pom.xml && rm -rf /opt/Bastillion-EC2-0.35.01/src/mai/resources/EC2BoxConfig.properties
 mvn package
 
 # Deploy the .war file into apache-tomcat
