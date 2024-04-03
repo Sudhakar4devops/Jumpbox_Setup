@@ -9,7 +9,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 # Install maven
 wget https://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
-sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo 
+sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
 yum install -y apache-maven
 export MAVEN_OPTS="-Xmx1024m -XX:MetaspaceSize=512m"
 
@@ -17,6 +17,7 @@ export MAVEN_OPTS="-Xmx1024m -XX:MetaspaceSize=512m"
 cd /opt/
 wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.86/bin/apache-tomcat-9.0.86.tar.gz -P /opt/
 tar -zxvf apache-tomcat-9.0.86.tar.gz --transform 's/apache-tomcat-9.0.86/apache-tomcat/' -C /opt/
+rm -rf /opt/apache-tomcat-9.0.86.tar.gz
 /opt/apache-tomcat/bin
 chmod +x startup.sh && chmod +x shutdown.sh
 ln -s /opt/apache-tomcat/bin/startup.sh /usr/local/bin/tomcatup
