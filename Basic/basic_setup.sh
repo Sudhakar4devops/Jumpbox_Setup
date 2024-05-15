@@ -15,9 +15,9 @@ export MAVEN_OPTS="-Xmx1024m -XX:MetaspaceSize=512m"
 
 # Install Apache-Tomcat
 cd /opt/
-wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.86/bin/apache-tomcat-9.0.86.tar.gz -P /opt/
-tar -zxvf apache-tomcat-9.0.86.tar.gz --transform 's/apache-tomcat-9.0.86/apache-tomcat/' -C /opt/
-rm -rf /opt/apache-tomcat-9.0.86.tar.gz
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.88/bin/apache-tomcat-9.0.88.tar.gz -P /opt/
+tar -zxvf apache-tomcat-9.0.88.tar.gz --transform 's/apache-tomcat-9.0.88/apache-tomcat/' -C /opt/
+rm -rf /opt/apache-tomcat-9.0.88.tar.gz
 /opt/apache-tomcat/bin
 chmod +x startup.sh && chmod +x shutdown.sh
 ln -s /opt/apache-tomcat/bin/startup.sh /usr/local/bin/tomcatup
